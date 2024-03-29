@@ -1,0 +1,30 @@
+PLINK v2.00a2LM AVX2 Intel (25 Oct 2019)       www.cog-genomics.org/plink/2.0/
+(C) 2005-2019 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3.log.
+Options in effect:
+  --extract /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3_soft.snplist
+  --make-bed
+  --out /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3
+  --pfile /home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c4_b0_v3
+
+Start time: Tue Feb 28 12:01:51 2023
+192029 MiB RAM detected; reserving 96014 MiB for main workspace.
+Using up to 40 threads (change this with --threads).
+487409 samples (264248 females, 222956 males, 205 ambiguous; 487409 founders)
+loaded from
+/home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c4_b0_v3.psam.
+6555871 variants loaded from
+/home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c4_b0_v3.pvar.
+Note: No phenotype data present.
+--extract: 5495734 variants remaining.
+5495734 variants remaining after main filters.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3.fam
+... done.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3.bim
+... done.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c4_b0_v3.bed
+... 0%1%2%3%5%6%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+End time: Tue Feb 28 12:18:25 2023

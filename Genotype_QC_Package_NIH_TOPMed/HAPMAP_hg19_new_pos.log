@@ -1,0 +1,26 @@
+PLINK v1.90b6.9 64-bit (4 Mar 2019)
+Options in effect:
+  --bfile HAPMAP_hg19_pos
+  --exclude dup.txt
+  --make-bed
+  --out HAPMAP_hg19_new_pos
+
+Hostname: beluga1.int.ets1.calculquebec.ca
+Working directory: /lustre03/project/6004655/COMMUN/runs/eyu8/QC_script/Genotype_QC_Package_NIH
+Start time: Tue Mar  3 12:24:36 2020
+
+Random number seed: 1583256276
+191875 MB RAM detected; reserving 95937 MB for main workspace.
+1101082 variants loaded from .bim file.
+640 people (318 males, 322 females) loaded from .fam.
+--exclude: 1101081 variants remaining.
+Using 1 thread (no multithreaded calculations invoked).
+Before main variant filters, 640 founders and 0 nonfounders present.
+Calculating allele frequencies... done.
+Total genotyping rate is 0.998533.
+1101081 variants and 640 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to HAPMAP_hg19_new_pos.bed + HAPMAP_hg19_new_pos.bim +
+HAPMAP_hg19_new_pos.fam ... done.
+
+End time: Tue Mar  3 12:24:38 2020

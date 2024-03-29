@@ -1,0 +1,30 @@
+PLINK v2.00a2LM AVX2 Intel (25 Oct 2019)       www.cog-genomics.org/plink/2.0/
+(C) 2005-2019 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3.log.
+Options in effect:
+  --extract /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3_soft.snplist
+  --make-bed
+  --out /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3
+  --pfile /home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c20_b0_v3
+
+Start time: Tue Feb 28 13:58:33 2023
+192029 MiB RAM detected; reserving 96014 MiB for main workspace.
+Using up to 40 threads (change this with --threads).
+487409 samples (264248 females, 222956 males, 205 ambiguous; 487409 founders)
+loaded from
+/home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c20_b0_v3.psam.
+2082571 variants loaded from
+/home/liulang/scratch/genotype/UKBB_new_imputation/ukb22828_c20_b0_v3.pvar.
+Note: No phenotype data present.
+--extract: 1757157 variants remaining.
+1757157 variants remaining after main filters.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3.fam
+... done.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3.bim
+... done.
+Writing
+/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c20_b0_v3.bed
+... 0%3%6%9%12%15%19%22%25%28%31%35%38%41%44%47%50%52%56%59%62%65%68%72%75%78%81%84%87%91%94%97%done.
+End time: Tue Feb 28 14:04:02 2023
