@@ -1,63 +1,0 @@
-pruning /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c2_b0_v3
-writing to
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC
-PLINK v1.90b6.9 64-bit (4 Mar 2019)            www.cog-genomics.org/plink/1.9/
-(C) 2005-2019 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.log.
-Options in effect:
-  --bfile /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c2_b0_v3
-  --indep-pairwise 200 50 0.25
-  --out /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC
-
-192029 MB RAM detected; reserving 96014 MB for main workspace.
-6770732 variants loaded from .bim file.
-487409 people (222956 males, 264248 females, 205 ambiguous) loaded from .fam.
-Ambiguous sex IDs written to
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.nosex
-.
-Using 1 thread (no multithreaded calculations invoked).
-Before main variant filters, 487409 founders and 0 nonfounders present.
-Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
-Total genotyping rate is 0.996711.
-6770732 variants and 487409 people pass filters and QC.
-Note: No phenotypes present.
-1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%Pruned 1866451 variants from chromosome 2, leaving 4904281.
-Pruning complete.  1866451 of 6770732 variants removed.
-Writing...Marker lists written to
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.prune.in
-and
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.prune.out
-.
-PLINK v2.00a3.6 AVX2 (14 Aug 2022)             www.cog-genomics.org/plink/2.0/
-(C) 2005-2022 Shaun Purcell, Christopher Chang   GNU General Public License v3
-Logging to /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.log.
-Options in effect:
-  --bfile /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c2_b0_v3
-  --extract /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.prune.in
-  --make-bed
-  --out /home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC
-  --output-chr 26
-  --rm-dup force-first
-
-Start time: Sun Mar  5 13:56:36 2023
-192029 MiB RAM detected; reserving 96014 MiB for main workspace.
-Using up to 40 threads (change this with --threads).
-487409 samples (264248 females, 222956 males, 205 ambiguous; 487409 founders)
-loaded from
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c2_b0_v3.fam.
-6770732 variants loaded from
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/ukb22828_c2_b0_v3.bim.
-Note: No phenotype data present.
---extract: 4913444 variants remaining.
---rm-dup: 24063 duplicated IDs, 24261 variants removed.
-4889183 variants remaining after main filters.
-Writing
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.fam
-... done.
-Writing
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.bim
-... done.
-Writing
-/home/liulang/scratch/genotype/UKBB_new_imputation/soft_call/pruning/ukb22828_c2_b0_v3.QC.bed
-... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
-End time: Sun Mar  5 14:46:51 2023
