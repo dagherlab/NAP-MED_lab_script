@@ -1,0 +1,68 @@
+Family ID
+Chr
+Position
+Reference Allele
+Mutant Allele
+Number of probands w/ variant in gene
+Allele count in genotypes, for each ALT allele, in the same order as listed (AC)
+Approximate read depth; some reads may have been filtered (DP)
+Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities (MQRankSum)
+Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias (ReadPosRankSum)
+Consequence
+Approximate read depth; some reads may have been filtered (DP)
+Phred-scaled p-value for exact test of excess heterozygosity (ExcessHet)
+IMPACT
+SYMBOL
+Gene
+Feature_type
+Feature
+BIOTYPE
+EXON
+INTRON
+HGVSc
+HGVSp
+cDNA_position
+CDS_position
+Protein_position
+Amino_acids
+Codons
+Existing_variation
+ALLELE_NUM
+REF_ALLELE
+DISTANCE
+STRAND
+FLAGS
+VARIANT_CLASS
+SYMBOL_SOURCE
+HGNC_ID
+CCDS
+ENSP
+NEAREST
+SIFT
+PolyPhen
+CLIN_SIG
+Somatic event (SOMATIC)
+PUBMED
+ExAC Allele frequency in genotypes, for each ALT allele, in the same order as listed (ExAC_AF)
+ExAC Allele frequency in genotypes, for each ALT allele, in the same order as listed (ExAC_AF)
+ExAC African/African American Allele frequency (ExAC_AF_AFR)
+ExAC American Allele frequency (ExAC_AF_AMR)
+ExAC Adjusted Allele frequency (ExAC_AF_Adj)
+ExAC Allele frequency among individuals with F > 0.05 (ExAC_AF_CONSANGUINEOUS)
+ExAC East Asian Allele frequency (ExAC_AF_EAS)
+ExAC Allele frequency among females (ExAC_AF_FEMALE)
+ExAC Finnish Allele frequency (ExAC_AF_FIN)
+ExAC Allele frequency among males (ExAC_AF_MALE)
+ExAC Non-Finnish European Allele frequency (ExAC_AF_NFE)
+ExAC Other Allele frequency (ExAC_AF_OTH)
+ExAC AC in the population with the max AF (ExAC_AF_POPMAX)
+ExAC South Asian Allele frequency (ExAC_AF_SAS)
+GeneSplicer predictions (GeneSplicer)
+Segregation Allele Count
+Segregation Allele Frequency
+Probands w/ variant individual names
+Total subjects w/ variant
+Total affected w/ variant
+Family affected w/ variant
+Family members
+Family member zygosity

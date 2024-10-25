@@ -1,0 +1,31 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    # Create the /project directory to bind the host path
+    mkdir -p /project
+    # Update and install necessary system dependencies
+    apt-get update && apt-get install -y \
+        r-base \
+        libcurl4-openssl-dev \
+        libssl-dev \
+        libxml2-dev \
+        git \
+        build-essential
+
+    # Install common R packages like tidyverse
+    R -e "install.packages('tidyverse', repos='https://cloud.r-project.org/')"
+
+    # Install devtools to help install ExomeDepth
+    R -e "install.packages('devtools', repos='https://cloud.r-project.org/')"
+
+    # Install ExomeDepth from GitHub
+    R -e "devtools::install_github('vplagnol/ExomeDepth')"
+
+%environment
+    # Set up R environment
+    export R_LIBS_USER=/usr/local/lib/R/site-library
+
+%runscript
+    # Define what happens when the container runs
+    exec R

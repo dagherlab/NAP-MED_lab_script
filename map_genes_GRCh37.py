@@ -51,7 +51,10 @@ all_df = ref[ref.gene.isin(set(all))]
 ## check mismatched genes 49/50 matched. there is an empty string (GBA should be GBA1)
 set(all) ^ set(list(all_df.gene))
 
+# for chrX. rename it to chr23
 
+print("WARNING! RENAMING chrX to chr23")
+all_df.loc[all_df.chr=="chrX","chr"] = "chr23"
 #make bed files
 p = pathname
 out = args.output

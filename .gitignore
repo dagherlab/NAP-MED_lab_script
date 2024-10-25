@@ -8,3 +8,4 @@ Genotype_QC_Package_NIH_TOPMed/After_QC/PASS.Variants.BRAVO_TOPMed_Freeze_8_hg19
 HRC_pipeline/*
 */*.bed 
 *.bed 
+Genotype_QC_Package_NIH_TOPMed/After_QC/HRC-1000G-check-bim-v4.3.0.zip

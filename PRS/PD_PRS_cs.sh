@@ -12,7 +12,6 @@ chr=$5
 # to keep the format of my original script. I did some stupid repetitive coding below
 SUM_STATS_FILE=/lustre04/scratch/liulang/GWAS/PD/PD_GWAS_2019.no23.tab.PRScs
 OUTPUT_DIR=$out
-OUTPUT_DIR_FINAL=$out_final
 chr=$chr
 module load scipy-stack/2020a python/3.8.10 
 ## under /home/liulang/runs/lang/software/PRScs

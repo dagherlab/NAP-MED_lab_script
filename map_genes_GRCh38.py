@@ -20,6 +20,14 @@ with open(path,"r") as f:
 genes = genes.split("\n")
 pathname = args.pathname
 
+# MANUALLY IDENTIFY GBA and convert it to GBA1 because GRCh38 has a different naming
+if "GBA" in genes:
+    print("identify GBA gene, renaming it to GBA1")
+    for i in range(len(genes)):
+        if genes[i] == "GBA":
+            genes[i] = "GBA1"
+    print(genes)
+
 #ok I don't wanna manually retrieve the coordinates for each gene
 #get gff file and see if I can retrieve it
 ### check the reference genome before you read them
@@ -50,7 +58,9 @@ all_df = ref[ref.gene.isin(set(all))]
 ### Problem solved
 ## check mismatched genes 49/50 matched. there is an empty string (GBA should be GBA1)
 set(all) ^ set(list(all_df.gene))
-
+# for chrX. rename it to chr23
+print("WARNING! RENAMING chrX to chr23")
+all_df.loc[all_df.chr=="chrX","chr"] = "chr23"
 
 #make bed files
 p = pathname
