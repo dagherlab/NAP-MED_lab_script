@@ -12,7 +12,7 @@ Rscript /home/liulang/runs/lang/software/PRSice-2_3_5/PRSice.R \
     --prsice /home/liulang/runs/lang/software/PRSice-2_3_5/PRSice_linux \
     --a1 effect_allele \
     --a2 other_allele \
-    --base /home/liulang/runs/eyu8/data/Summary_stats/PD_GWAS_summary_stats/PD_GWAS_2019.no23.tsv \
+    --base ~/runs/eyu8/data/Summary_stats/PD_GWAS_summary_stats/PD_GWAS_2019.no23.tsv \
     --beta \
     --bar-levels 1 \
     --fastscore \

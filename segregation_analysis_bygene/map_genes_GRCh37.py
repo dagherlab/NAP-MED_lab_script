@@ -23,7 +23,7 @@ if args.recode:
 path = args.input
 #path='/lustre03/project/6004655/COMMUN/runs/senkkon/2023/LysUKBB/lysgenes.txt'
 with open(path,"r") as f:
-    genes = f.read().strip()
+    genes = f.read().strip().replace('"',"")
 genes = genes.split("\n")
 pathname = args.pathname
 
