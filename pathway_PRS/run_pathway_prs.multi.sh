@@ -9,7 +9,7 @@ gene_lists_dir=$1 # it is the folder of gene_list files
 output_dir=$2
 cohort=$3 # make sure you've QCed your genotyping data
 target=$4 # you should make sure bim files contain rsid only instead of positions or rsid:alleles
-skip_bed_files=${5:-TRUE}
+skip_bed_files=${5:-FALSE}
 
 
 script_dir=~/lang/scripts/pathway_PRS/ 
