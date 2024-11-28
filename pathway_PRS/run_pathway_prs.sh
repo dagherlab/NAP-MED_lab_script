@@ -17,7 +17,7 @@ output_folder=$output_dir/$name
 mkdir -p $output_folder
 
 
-script_dir=/home/liulang/lang/scripts/pathway_PRS/ 
+script_dir=~/lang/scripts/pathway_PRS/ 
 
 if [[ -z $gene_list ]]; then echo "ERROR: gene_list (1st arg) not specified"; exit 42; fi
 if [[ -z $output_dir ]]; then echo "ERROR: out directory (2nd arg) not specified"; exit 42; fi
