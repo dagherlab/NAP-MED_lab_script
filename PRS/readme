@@ -1,0 +1,19 @@
+1. check your data (base and target)
+    - base: if it is not PD GWAS, look into the headers. make sure it is a tsv file. for header,  make sure there are columns "A1", "A2", "SNP", "b", "p"
+    - target: this works for imputed genotyping data only (apply info filter yourself). and the script works only on bychr plink files.
+
+2. standard GWAS QC on targett data. (maf, hwe and geno)
+# use # to represent chr number like plink_chr1 -> plink_chr#
+plink=~/runs/senkkon/2022/TIM_TOM/AMP_PD/chr#_FILTERED
+out=~/scratch/AMP_PD # folder for output data
+bash /lustre03/project/6004655/COMMUN/runs/lang/scripts/PRS/PRS_target_QC.sh $plink $out
+
+
+
+3. PRS calculation
+# plink file name,  # to represent chr number like plink_chr1 -> plink_chr#
+bfile_prefix=~/scratch/AMP_PD/chr# 
+out=~/scratch/AMP_PD # folder for output data
+name=AMP_PD
+command="bash /lustre03/project/6004655/COMMUN/runs/lang/scripts/PRS/PD_PRS.sh $bfile_prefix $out $name"
+sbatch -c 10 --mem=20g -t 3:0:0 --out prs.out --account=def-grouleau --wrap "$command" --job-name PRS

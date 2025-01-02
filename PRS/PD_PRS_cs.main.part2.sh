@@ -6,19 +6,6 @@ name=$4
 SAMPLE_SIZE=$5
 keep=${6:-"FALSE"}
 
-# calculate weights for each variant
-for chr in {1..22};do 
-bfile_prefix=$(echo $bfile| sed "s/\${chr}/${chr}/g")
-echo "$bfile_prefix is being calculated"
-command="bash /home/liulang/lang/scripts/PRS/PD_PRS_cs.sh $bfile_prefix $out $name $SAMPLE_SIZE $chr"
-echo $command
-#echo ${out}/${name}_pst_eff_a1_b0.5_phiauto_chr${chr}.txt
-#echo ${out_final}/${name}_chr${chr}.out
-echo ${out_final}/${name}_chr${chr}.out
-sbatch -c 10 --mem=20g -t 4:0:0 --wrap "$command" --account=def-grouleau --out ${out_final}/${name}_chr${chr}.out;
-done 
-
-sleep 3h
 
 
 # Loop indefinitely until all files are found
@@ -45,12 +32,12 @@ done
 # calculate average score for each chromosome and convert to zscore 
 # sum up scores across chromosomes and convert to zscore
 for chr in {1..22};do 
-bfile_prefix=$(echo $bfile| sed "s/\${chr}/${chr}/g")
-echo "$bfile_prefix is being calculated"
-# plink2 has a skip dup ID feature. this might be problematic if the multiallelic snps are important. but this is usually QCed.
-#module load nixpkgs/16.09 StdEnv/2020 plink/2.00-10252019-avx2 && plink2 --bfile $bfile_prefix --score ${out}/${name}_pst_eff_a1_b0.5_phiauto_chr${chr}.txt 2 4 6 ignore-dup-ids --out ${out}/${name}.chr${chr}
-command="module load nixpkgs/16.09 StdEnv/2020 plink/2.00-10252019-avx2 && plink2 --bfile $bfile_prefix --score ${out}/${name}_pst_eff_a1_b0.5_phiauto_chr${chr}.txt 2 4 6 ignore-dup-ids --out ${out}/${name}.chr${chr}"
-sbatch -c 5 --mem=20g -t 3:0:0 --account=def-grouleau --wrap "$command" --out ${out}/${name}.${chr}.score.out
+    bfile_prefix=$(echo $bfile| sed "s/\${chr}/${chr}/g")
+    echo "$bfile_prefix is being calculated"
+    # plink2 has a skip dup ID feature. this might be problematic if the multiallelic snps are important. but this is usually QCed.
+    #module load nixpkgs/16.09 StdEnv/2020 plink/2.00-10252019-avx2 && plink2 --bfile $bfile_prefix --score ${out}/${name}_pst_eff_a1_b0.5_phiauto_chr${chr}.txt 2 4 6 ignore-dup-ids --out ${out}/${name}.chr${chr}
+    command="module load nixpkgs/16.09 StdEnv/2020 plink/2.00-10252019-avx2 && plink2 --bfile $bfile_prefix --score ${out}/${name}_pst_eff_a1_b0.5_phiauto_chr${chr}.txt 2 4 6 ignore-dup-ids --out ${out}/${name}.chr${chr}"
+    sbatch -c 5 --mem=20g -t 3:0:0 --account=def-grouleau --wrap "$command" --out ${out}/${name}.${chr}.score.out
 done 
 
 
@@ -79,5 +66,3 @@ done
 
 module load scipy-stack/2020a python/3.8.10
 python /home/liulang/lang/scripts/PRS/calculate_avg_and_zscore_PRScs_PLINK2.py ${out} ${name} ${out_final}
-
-

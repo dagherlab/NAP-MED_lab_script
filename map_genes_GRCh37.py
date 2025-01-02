@@ -1,5 +1,7 @@
 ## map gene names to their coordinates (GRCh37)
+# how to use
 #module load python/3.8.10 scipy-stack/2020a
+#python map_genes_GRCh37.py -i path/to/your/gene_list -o path/to/your/bed -p pathway_name
 #step1
 print("loading packages")
 import argparse

@@ -11,6 +11,9 @@ args = parser.parse_args()
 
 file = args.input
 df = pd.read_csv(file)
+if df.shape[1] == 1:
+    df = pd.read_csv(file,sep=" ")
+
 #it contains FID and IID at the begining 
 columns = df.columns
 id_column = columns[0:2]
