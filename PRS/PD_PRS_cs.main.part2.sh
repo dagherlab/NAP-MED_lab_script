@@ -4,7 +4,6 @@ out=$2
 out_final=$3
 name=$4
 SAMPLE_SIZE=$5
-keep=${6:-"FALSE"}
 
 
 

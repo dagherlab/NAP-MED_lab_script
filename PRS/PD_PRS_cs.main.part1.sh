@@ -4,11 +4,10 @@ out=$2
 out_final=$3
 name=$4
 SAMPLE_SIZE=$5
-keep=${6:-"FALSE"}
 
 # calculate weights for each variant
 for chr in {1..22};do 
-    bfile_prefix=$(echo $bfile| sed "s/\${chr}/${chr}/g")
+    bfile_prefix=$(echo $bfile|sed "s/#/$chr/")
     echo "$bfile_prefix is being calculated"
     command="bash /home/liulang/lang/scripts/PRS/PD_PRS_cs.sh $bfile_prefix $out $name $SAMPLE_SIZE $chr"
     echo $command

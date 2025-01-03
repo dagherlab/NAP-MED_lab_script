@@ -33,8 +33,8 @@ echo "please re-specify the path for your PD GWAS summary stat which should be P
 fi 
 
 echo "start running iterations"
-#mkdir -p ${OUTPUT_DIR}/${name}
-python ${SCRIPT_DIR}/PRScs.py --ref_dir=$PATH_TO_REFERENCE --bim_prefix=$VALIDATION_BIM_PREFIX --sst_file=$SUM_STATS_FILE --n_gwas=$GWAS_SAMPLE_SIZE --chrom=$chr --out_dir=${OUTPUT_DIR}/${name}
+mkdir -p ${OUTPUT_DIR}/
+python -u ${SCRIPT_DIR}/PRScs.py --ref_dir=$PATH_TO_REFERENCE --bim_prefix=$VALIDATION_BIM_PREFIX --sst_file=$SUM_STATS_FILE --n_gwas=$GWAS_SAMPLE_SIZE --chrom=$chr --out_dir=${OUTPUT_DIR}/${name}
 #sbatch -c 5 --mem=10g -t 3:0:0 --wrap "$command" --account=def-grouleau --out ${OUTPUT_DIR}/log.out;
 
 
