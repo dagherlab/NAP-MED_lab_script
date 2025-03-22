@@ -8,7 +8,8 @@ SAMPLE_SIZE=$4
 chr=$5
 
 
-
+# Record the start time
+start_time=$(date +%s)
 # to keep the format of my original script. I did some stupid repetitive coding below
 SUM_STATS_FILE=/lustre04/scratch/liulang/GWAS/PD/PD_GWAS_2019.no23.tab.PRScs
 OUTPUT_DIR=$out
@@ -38,3 +39,9 @@ python -u ${SCRIPT_DIR}/PRScs.py --ref_dir=$PATH_TO_REFERENCE --bim_prefix=$VALI
 #sbatch -c 5 --mem=10g -t 3:0:0 --wrap "$command" --account=def-grouleau --out ${OUTPUT_DIR}/log.out;
 
 
+# Record the end time
+end_time=$(date +%s)
+# Calculate the duration
+duration=$((end_time - start_time))
+# Print the duration
+echo "Duration: ${duration} seconds"

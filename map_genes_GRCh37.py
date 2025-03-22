@@ -41,6 +41,12 @@ def get_gene_name(s):
     return gene_name
 
 ref["gene_name"] = list(map(lambda x: get_gene_name(x),ref.attribute))
+ref = ref[["seqname","start","end","gene_name","strand"]]
+# switch start and end for - strand 
+start = ref.loc[ref.strand == "-","end"]
+end = ref.loc[ref.strand == "-","start"]
+ref.loc[ref.strand == "-","start"] = start 
+ref.loc[ref.strand == "-","end"] = end
 ref = ref[["seqname","start","end","gene_name"]]
 ref.columns = ["chr","start","end","gene"]
 

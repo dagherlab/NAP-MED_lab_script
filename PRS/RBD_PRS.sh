@@ -10,9 +10,9 @@ keep=${4:-"FALSE"}
 ## the snp in gwas file is renamed
 base=/home/liulang/scratch/GWAS/RBD/META_GWAS_2020_PRS.QC.tab.QC
 if [ -f $base ];then 
-echo "the summary stat file for PD $base is present"
+echo "the summary stat file for RBD $base is present"
 else
-echo "please re-specify the path for your PD GWAS summary stat which should be PD_GWAS_2019.PRS.1800.rename.txt"
+echo "please re-specify the path for your RBD GWAS summary stat"
 fi 
 
 # use # to represent the target data is split based on chromosome (only prefix)
