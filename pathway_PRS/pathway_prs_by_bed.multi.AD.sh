@@ -4,7 +4,7 @@ target=$1
 bed=$2
 output_folder=$3
 cohort=$4
-output_name=${output_folder}/${cohort}
+output_name=${output_folder}/${cohort}.AD
 mkdir -p $output_folder
 
 if [[ "$cohort" == "UKB" ]]; then
@@ -23,14 +23,14 @@ for file in "${files[@]}"; do
   # Append to result in the desired format
   result+="$file:$base,"
 done
-bed=$result 
+bed=$(echo $result|sed 's/,$//')
 
 
 Rscript ~/runs/lang/software/PRSice-2_3_5/PRSice.R \
     --prsice ~/runs/lang/software/PRSice-2_3_5/PRSice_linux \
     --a1 effect_allele \
     --a2 other_allele \
-    --base ~/runs/eyu8/data/Summary_stats/PD_GWAS_summary_stats/PD_GWAS_2019.no23.tsv \
+    --base /lustre03/project/6004655/COMMUN/runs/go_lab/summary_stats/AD/GCST90027158_buildGRCh38.PRS.tsv.gz \
     --no-regress \
     --beta \
     --bar-levels 1 \
@@ -45,8 +45,17 @@ Rscript ~/runs/lang/software/PRSice-2_3_5/PRSice.R \
     --perm 10000 \
     --num-auto 22 \
     --out $output_name \
-    --pvalue p-value \
+    --pvalue p_value \
     --score avg \
     --snp variant_id \
     --stat beta \
     --target $target \
+
+
+# reformat
+awk 'BEGIN { FS=" "; OFS="," } {$1=$1; print}' $output_name.all_score  > $output_name.csv
+# convert to zscore
+module load scipy-stack/2020a python/3.8.10
+python /lustre03/project/6004655/COMMUN/runs/lang/scripts/convert_z.py \
+    -i $output_name.csv \
+    -o ${output_folder}

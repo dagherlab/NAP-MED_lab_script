@@ -15,7 +15,7 @@ name=$3
 ## 1. no pruning in target data
 ## 2. no clumping in PRSice
 ## the snp in gwas file is renamed
-base=/lustre03/project/6004655/COMMUN/runs/eyu8/data/PRS/PD/UKB/PD_GWAS_2019.PRS.1800.txt
+base=/lustre03/project/6004655/COMMUN/runs/go_lab/summary_stats/PD_2025/GP2_euro_ancestry_meta_analysis_2024/GP2_ALL_EUR_ALL_DATASET_HG38_12162024.rsid.txt.gz
 if [ -f $base ];then 
 echo "the summary stat file for PD $base is present"
 else

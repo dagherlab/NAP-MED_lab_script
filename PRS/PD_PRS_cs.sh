@@ -11,7 +11,8 @@ chr=$5
 # Record the start time
 start_time=$(date +%s)
 # to keep the format of my original script. I did some stupid repetitive coding below
-SUM_STATS_FILE=/lustre04/scratch/liulang/GWAS/PD/PD_GWAS_2019.no23.tab.PRScs
+# change here to your processed GWAS
+SUM_STATS_FILE=~/scratch/GWAS/PD/PD_GWAS_2025.tab.PRScs
 OUTPUT_DIR=$out
 chr=$chr
 module load scipy-stack/2020a python/3.8.10 
@@ -24,13 +25,13 @@ export OMP_NUM_THREADS=$N_THREADS
 ### default flag
 PATH_TO_REFERENCE="/lustre03/project/6004655/COMMUN/runs/lang/software/LD_reference/ldblk_1kg_eur";
 VALIDATION_BIM_PREFIX=$bfile_prefix
-SCRIPT_DIR="/home/liulang/lang/software/PRScs"
+SCRIPT_DIR="/lustre03/project/6004655/COMMUN/runs/lang/software/PRScs"
 GWAS_SAMPLE_SIZE=$SAMPLE_SIZE;
 
 if [ -f $SUM_STATS_FILE ];then 
 echo "the summary stat file for PD $SUM_STATS_FILE is present"
 else
-echo "please re-specify the path for your PD GWAS summary stat which should be PD_GWAS_2019.PRS.1800.rename.txt"
+echo "please re-specify the path for your PD GWAS summary stat"
 fi 
 
 echo "start running iterations"
